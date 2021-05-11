@@ -1,0 +1,74 @@
+{
+  "build_entry_point": "docs",
+  "docsets_to_publish": [
+    {
+      "docset_name": "dynamics-nav-app",
+      "build_source_folder": "dynamics-nav-app",
+      "build_output_subfolder": "dynamics-nav-app",
+      "locale": "da-dk",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0
+    }
+  ],
+  "notification_subscribers": [
+    "edupont@microsoft.com"
+  ],
+  "branches_to_filter": [
+    "live-sxs",
+    "main-sxs"
+  ],
+  "continue_with_document_error": true,
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": false,
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.da-dk",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/MicrosoftDocs/nav-content",
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "main": "main"
+      }
+    }
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ],
+    "master": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  },
+  "need_generate_intellisense": false
+}
